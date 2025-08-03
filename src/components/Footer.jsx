@@ -3,7 +3,12 @@ import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <footer className="bg-slate-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +20,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://leetcode.com/u/kuldeep123456789/" 
+                href="https://github.com/Ksr123456789/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200 hover:scale-110"
@@ -23,14 +28,16 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/kuldeep-rawat-254943271/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200 hover:scale-110"
               >
                 <Linkedin size={20} />
               </a>
               <a 
-                href="#" 
-                className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200 hover:scale-110"
+                onClick={(e)=>{ e.preventDefault(); scrollToSection("contact")}}
+                className="cursor-pointer p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all duration-200 hover:scale-110"
               >
                 <Mail size={20} />
               </a>
@@ -40,11 +47,11 @@ const Footer = () => {
           <div className="animate-fade-in-delay">
             <h4 className="text-base font-semibold mb-4">Navigation</h4>
             <ul className="space-y-3 text-slate-400 text-sm">
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#experience" className="hover:text-white transition-colors">Experience</a></li>
-              <li><a href="#projects" className="hover:text-white transition-colors">Projects</a></li>
-              <li><a href="#skills" className="hover:text-white transition-colors">Skills</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a  onClick={(e)=>{ e.preventDefault(); scrollToSection("about")}} className="cursor-pointer hover:text-white transition-colors">About</a></li>
+              <li><a onClick={(e)=>{ e.preventDefault(); scrollToSection("education")}}  className="cursor-pointer hover:text-white transition-colors">Education</a></li>
+              <li><a onClick={(e)=>{ e.preventDefault(); scrollToSection("projects")}} className="cursor-pointer hover:text-white transition-colors">Projects</a></li>
+              <li><a onClick={(e)=>{ e.preventDefault(); scrollToSection("skills")}}  className="cursor-pointer cursor-pointerhover:text-white transition-colors">Skills</a></li>
+              <li><a onClick={(e)=>{ e.preventDefault(); scrollToSection("contact")}}  className="cursor-pointer hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -62,7 +69,7 @@ const Footer = () => {
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center animate-fade-in-delay-3">
           <p className="text-slate-400 flex items-center justify-center gap-2 text-sm">
-            Built with <Heart size={14} className="text-red-500" /> by Kuldeep
+            Built by Kuldeep
             <span className="mx-2">•</span>
             © {currentYear} All rights reserved.
           </p>

@@ -8,32 +8,28 @@ const Projects = () => {
       description: "Personal portfolio website built with React.js and Tailwind CSS. Features responsive design, smooth animations, and modern UI components.",
       image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
       tech: ["React", "JavaScript", "Tailwind CSS", "CSS3"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/Ksr123456789/portfolio"
     },
     {
       title: "Todo Application",
       description: "Interactive todo application with CRUD operations. Built with React hooks for state management and local storage for data persistence.",
       image: "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800",
       tech: ["React", "JavaScript", "CSS3", "Local Storage"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/Ksr123456789/To-do-List-MERN-STACK-"
     },
     {
      title: "Password Generator",
      description: "A simple and responsive password generator that allows users to customize password length and include uppercase, lowercase, numbers, and symbols. Built entirely with React.js.",
      image: "https://images.pexels.com/photos/5380596/pexels-photo-5380596.jpeg?auto=compress&cs=tinysrgb&w=800",
      tech: ["React", "JavaScript", "CSS3"],
-     github: "#",
-     live: "#"
+     github: "https://github.com/Ksr123456789/password-generator"
     },
     {
      title: "Fullstack Chat Application",
      description: "Real-time chat application with user authentication, instant message updates. Built with React on the frontend and Node.js with Socket.io on the backend.",
      image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800",
      tech: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
-     github: "#",
-     live: "#"
+     github: "https://github.com/Ksr123456789/chat-app"
     }
 
 
@@ -77,6 +73,8 @@ const Projects = () => {
                 <div >
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-1 text-slate-500 hover:text-slate-700 transition-colors text-sm hover:scale-105"
                   >
                     <Github size={14} />
