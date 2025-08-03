@@ -41,7 +41,7 @@ const Hero = () => {
 
             <div className="mb-8 animate-fade-in-delay-4">
               <a
-                href="https://drive.google.com/uc?export=download&id=1rsBWBtUL_TQRhsTRdhtLroKhq_-hgHo_"
+                href="https://drive.google.com/file/d/1QSNBmlwPHcMBVDbal0f0s5bA96F-GFYL/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer">
                 <button
